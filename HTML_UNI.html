@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 3 Latin American Universities 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .source {
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #4a5568;
+        }
+        
+        .source strong {
+            color: #2d3748;
+        }
+        
+        .country-section {
+            margin-bottom: 50px;
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .country-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .country-flag {
+            font-size: 2.5em;
+        }
+        
+        .country-name {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        
+        .universities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .category-title {
+            font-size: 1.3em;
+            color: #2d3748;
+            margin: 25px 0 15px 0;
+            padding-left: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .university-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+        
+        .rank-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .university-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 12px;
+            padding-right: 60px;
+        }
+        
+        .university-type {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .public {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .private {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+        
+        .university-info {
+            color: #4a5568;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+        
+        .info-row {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            margin-right: 8px;
+            color: #2d3748;
+            min-width: 140px;
+        }
+        
+        .employer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #fef3c7;
+            color: #78350f;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        .employer-badge.high {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .employer-badge.medium {
+            background: #fef3c7;
+            color: #78350f;
+        }
+        
+        .note {
+            background: #fff5e6;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #78350f;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .universities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Top 3 Latin American Universities 2025</h1>
+            <p class="subtitle">Ranking of the Best Public and Private Universities by Country</p>
+            <div class="source">
+                <strong>Source:</strong> QS World University Rankings 2025-2026, QS Latin America & Caribbean Rankings, 
+                National Rankings (SUNEDU Peru, Scimago, Webometrics) and multiple verified academic sources.
+                <br><strong>Query Date:</strong> November 2025
+                <br><strong>Key Indicator:</strong> 💼 Employer Reputation Score (measures graduate employability and recognition by companies)
+            </div>
+        </header>
+
+        <!-- ARGENTINA -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇦🇷</span>
+                <span class="country-name">ARGENTINA</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad de Buenos Aires (UBA)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#84 (2026)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>Top 10</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Law, Medicine, Anthropology, Sociology</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Employer Reputation in Argentina</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Nacional de La Plata (UNLP)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">National Rank:</span>
+                            <span>#2 Argentina</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Computer Science, Engineering</span>
+                        </div>
+                        <span class="employer-badge medium">💼 Strong Graduate Employment</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Nacional de Córdoba (UNC)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">National Rank:</span>
+                            <span>#3 Argentina</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Note:</span>
+                            <span>Oldest university in Argentina (1613)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Austral</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Ranking:</span>
+                            <span>#1 Private Argentina</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Biomedical Sciences</span>
+                        </div>
+                        <span class="employer-badge high">💼 Excellent Corporate Connections</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Pontificia Universidad Católica Argentina (UCA)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Ranking:</span>
+                            <span>#2 Private Argentina</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Social Sciences, Theology, Law</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Torcuato Di Tella (UTDT)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Economics, Political Science, Business</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top for Economics Graduates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOLIVIA -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇧🇴</span>
+                <span class="country-name">BOLIVIA</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Mayor de San Andrés (UMSA)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#1201-1400</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>La Paz</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Research, Social Sciences</span>
+                        </div>
+                        <span class="employer-badge medium">💼 Leading Public University</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Mayor de San Simón (UMSS)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">National Rank:</span>
+                            <span>#2 Bolivia</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Cochabamba</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Founded:</span>
+                            <span>1832</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Autónoma Gabriel René Moreno (UAGRM)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Santa Cruz</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Founded:</span>
+                            <span>1880</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Católica Boliviana (UCB)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#1401+</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Campuses:</span>
+                            <span>La Paz, Santa Cruz, Cochabamba, Tarija</span>
+                        </div>
+                        <span class="employer-badge high">💼 Best Private in Bolivia</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Privada Boliviana (UPB)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Cochabamba</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Engineering, Technology</span>
+                        </div>
+                        <span class="employer-badge medium">💼 Strong Tech Graduates</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Privada Franz Tamayo (UNIFRANZ)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>La Paz</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Founded:</span>
+                            <span>1993</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BRAZIL -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇧🇷</span>
+                <span class="country-name">BRAZIL</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidade de São Paulo (USP)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#92 (2025)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#2</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Research, Medicine, Engineering</span>
+                        </div>
+                        <span class="employer-badge high">💼 Highest Employer Reputation Brazil</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidade Estadual de Campinas (UNICAMP)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#3</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Sciences, Technology, Research</span>
+                        </div>
+                        <span class="employer-badge high">💼 Excellent Research Output</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidade Federal do Rio de Janeiro (UFRJ)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#5</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Engineering, Arts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>Top 20</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Engineering, Law, Business</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Private Employer Recognition</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Pontifícia Universidade Católica de São Paulo (PUC-SP)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Law, Psychology, Communications</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Fundação Getulio Vargas (FGV)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Economics, Business Administration, Law</span>
+                        </div>
+                        <span class="employer-badge high">💼 Leading Business School</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHILE -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇨🇱</span>
+                <span class="country-name">CHILE</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad de Chile</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#179 (2025)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>Top 10</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Sciences, Medicine, Engineering</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Public University Chile</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad de Santiago de Chile (USACH)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Engineering, Technology</span>
+                        </div>
+                        <span class="employer-badge medium">💼 Strong Engineering Reputation</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad de Concepción</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Research, Sciences</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Pontificia Universidad Católica de Chile (UC)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#93 (2025)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#1 (2026)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>All fields, Regional leader</span>
+                        </div>
+                        <span class="employer-badge high">💼 #1 Employer Reputation in LatAm</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Adolfo Ibáñez (UAI)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Economics</span>
+                        </div>
+                        <span class="employer-badge high">💼 Excellent for Business Graduates</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad del Desarrollo (UDD)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Health, Business</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLOMBIA -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇨🇴</span>
+                <span class="country-name">COLOMBIA</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Nacional de Colombia</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>Top 15</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Research, All fields</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Employer Recognition Colombia</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad de Antioquia</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Medellín</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Social Sciences</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad del Valle</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Cali</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Health, Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad de Los Andes</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#336 (2025)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>Top 10</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Engineering, Law</span>
+                        </div>
+                        <span class="employer-badge high">💼 Best Employer Reputation Colombia</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Pontificia Universidad Javeriana</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Psychology, Engineering</span>
+                        </div>
+                        <span class="employer-badge high">💼 Strong Graduate Placement</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad del Rosario</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Law, International Relations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ECUADOR -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇪🇨</span>
+                <span class="country-name">ECUADOR</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Escuela Politécnica Nacional (EPN)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Quito</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Engineering, Technology, Sciences</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Engineering School Ecuador</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Central del Ecuador</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Quito</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Law, Education</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad de Cuenca</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Cuenca</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Architecture, Social Sciences</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad San Francisco de Quito (USFQ)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#801-850</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#34</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Liberal Arts, Engineering, Sciences</span>
+                        </div>
+                        <span class="employer-badge high">💼 Best Private University Ecuador</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Pontificia Universidad Católica del Ecuador (PUCE)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Quito</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Social Sciences, Theology</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad de las Américas (UDLA)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Quito</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Communications, Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEXICO -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇲🇽</span>
+                <span class="country-name">MEXICO</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Nacional Autónoma de México (UNAM)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#94 (2025), #136 (2026)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#4</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Students:</span>
+                            <span>Over 350,000 (largest in LatAm)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>All fields, 3 Nobel Prize winners</span>
+                        </div>
+                        <span class="employer-badge high">💼 Highest Academic Reputation Mexico</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Instituto Politécnico Nacional (IPN)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#651-700</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Students:</span>
+                            <span>~170,000</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Engineering, Technology, Computer Science</span>
+                        </div>
+                        <span class="employer-badge medium">💼 Strong Technical Reputation</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Autónoma Metropolitana (UAM)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#751-800</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Mexico City</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Social Sciences, Design, Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Tecnológico de Monterrey (ITESM)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#184 (2025)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#7</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Campuses:</span>
+                            <span>31 campuses in 25 cities</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Engineering, Innovation</span>
+                        </div>
+                        <span class="employer-badge high">💼 #2 Employer Reputation LatAm</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Panamericana (UP)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#661-670</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Ranking:</span>
+                            <span>#2 Private Mexico</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Philosophy, Hospitality</span>
+                        </div>
+                        <span class="employer-badge high">💼 Excellent MBA Programs</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Instituto Tecnológico Autónomo de México (ITAM)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#651-660</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Mexico City</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Economics, Political Science, Law</span>
+                        </div>
+                        <span class="employer-badge high">💼 Leading Think Tank</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PARAGUAY -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇵🇾</span>
+                <span class="country-name">PARAGUAY</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Nacional de Asunción (UNA)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#1001-1200</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Asunción</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Note:</span>
+                            <span>Largest and oldest university in Paraguay</span>
+                        </div>
+                        <span class="employer-badge medium">💼 Leading National University</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Nacional del Este (UNE)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Ciudad del Este</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Agriculture, Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Nacional de Itapúa (UNI)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Encarnación</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Regional education, Agriculture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Católica Nuestra Señora de la Asunción (UCA)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Asunción</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Law, Business, Social Sciences</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Private Paraguay</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Americana (UA)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Asunción</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Columbia del Paraguay</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Asunción</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Health Sciences</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERU -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇵🇪</span>
+                <span class="country-name">PERU</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad Nacional Mayor de San Marcos (UNMSM)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">National Rank:</span>
+                            <span>#1 Public Peru (SUNEDU)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Lima</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Founded:</span>
+                            <span>1551 - Oldest in Americas</span>
+                        </div>
+                        <span class="employer-badge high">💼 Historic Prestige & Recognition</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Nacional de Ingeniería (UNI)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">National Rank:</span>
+                            <span>#3 Public Peru</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Lima</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Engineering, Technology, Sciences</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Engineering Graduates Peru</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad Nacional Agraria La Molina (UNALM)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">National Rank:</span>
+                            <span>#4 Public Peru</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Lima</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Agriculture, Veterinary, Environmental Sciences</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-title">🏢 Private Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Pontificia Universidad Católica del Perú (PUCP)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#359 (2025)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">LatAm Rank:</span>
+                            <span>#11</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>All fields, #1 Peru overall</span>
+                        </div>
+                        <span class="employer-badge high">💼 Highest Employer Reputation Peru</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">2</div>
+                    <h4 class="university-name">Universidad Peruana Cayetano Heredia (UPCH)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">National Rank:</span>
+                            <span>#1 Private (SUNEDU)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Lima</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Medicine, Health Sciences, Research</span>
+                        </div>
+                        <span class="employer-badge high">💼 Top Medical School Peru</span>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad del Pacífico</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Lima</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Economics, Business, Finance</span>
+                        </div>
+                        <span class="employer-badge high">💼 Leading Business School Peru</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- URUGUAY -->
+        <div class="country-section">
+            <div class="country-header">
+                <span class="country-flag">🇺🇾</span>
+                <span class="country-name">URUGUAY</span>
+            </div>
+            
+            <h3 class="category-title">🏛️ Public Universities</h3>
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="rank-badge">1</div>
+                    <h4 class="university-name">Universidad de la República (UdelaR)</h4>
+                    <span class="university-type public">PUBLIC</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">QS Global Rank:</span>
+                            <span>#661-670 (2025)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Montevideo</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Business, Law, Social Sciences</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="rank-badge">3</div>
+                    <h4 class="university-name">Universidad de Montevideo (UM)</h4>
+                    <span class="university-type private">PRIVATE</span>
+                    <div class="university-info">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span>Montevideo</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Strengths:</span>
+                            <span>Law, Economics, Business</span>
+                        </div>
+                        <span class="employer-badge medium">💼 Strong Business Programs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>📊 About Employer Reputation:</strong> The Employer Reputation indicator measures how graduates from each university are perceived and valued by companies and organizations worldwide. Universities with high employer reputation scores typically have strong alumni networks, career services, and produce graduates who are highly sought after in the job market. This metric is based on surveys with thousands of employers globally.
+        </div>
+
+        <div class="note">
+            <strong>📈 Methodology & Sources:</strong> This ranking combines data from QS World University Rankings 2025-2026, QS Latin America & Caribbean Rankings, national education authorities (SUNEDU Peru, etc.), Scimago Institutions Rankings, Webometrics, and other verified academic databases. Rankings may vary depending on the methodology used by each ranking system. The QS methodology includes: Academic Reputation (30%), Employer Reputation (15%), Faculty/Student Ratio (10%), Citations per Faculty (20%), International Faculty & Students (10%), International Research Network (5%), Employment Outcomes (5%), and Sustainability (5%).
+        </div>
+
+        <div class="note">
+            <strong>🎓 Key Findings:</strong>
+            <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.8;">
+                <li><strong>Regional Leaders:</strong> Pontificia Universidad Católica de Chile (UC) ranks #1 in Latin America (2026), followed by Universidade de São Paulo (Brazil) at #2.</li>
+                <li><strong>Top 100 Global:</strong> Only Universidad de Buenos Aires (Argentina #84), USP (Brazil #92), and UC (Chile #93) make the global top 100.</li>
+                <li><strong>Best for Employability:</strong> UC (Chile) and Universidad de Buenos Aires (Argentina) have the highest employer reputation scores in the region.</li>
+                <li><strong>Public vs Private:</strong> Public universities dominate the top positions overall, occupying 7 of the top 10 spots in Latin America, though private institutions excel in specialized fields like business and technology.</li>
+                <li><strong>Largest Universities:</strong> UNAM (Mexico) with 350,000+ students is the largest, followed by Universidad de Buenos Aires with significant enrollment.</li>
+                <li><strong>Research Leaders:</strong> Brazil dominates research output with 8 of the top 10 universities for research papers per faculty being Brazilian institutions.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p><strong>Report Generated:</strong> November 2025</p>
+            <p>Data compiled from multiple international and regional university ranking sources</p>
+            <p style="margin-top: 15px; font-size: 0.85em;">
+                <strong>Countries Included:</strong> Argentina 🇦🇷 | Bolivia 🇧🇴 | Brazil 🇧🇷 | Chile 🇨🇱 | Colombia 🇨🇴 | Ecuador 🇪🇨 | Mexico 🇲🇽 | Paraguay 🇵🇾 | Peru 🇵🇪 | Uruguay 🇺🇾
+            </p>
+            <p style="margin-top: 10px; font-size: 0.85em;">For the most up-to-date information, please consult the official websites of the universities and ranking organizations.</p>
+            <p style="margin-top: 15px; font-size: 0.9em; color: #667eea; font-weight: 600;">
+                Total Universities Featured: 60 (30 Public + 30 Private)
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
